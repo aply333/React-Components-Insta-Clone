@@ -9,6 +9,9 @@ import "./Posts.css";
 
 const Post = props => {
   // set up state for the likes
+  // console.log('props-in-p', props)
+
+
 
   return (
     <div className="post-border">
@@ -25,7 +28,9 @@ const Post = props => {
           src={props.post.imageUrl}
         />
       </div>
-      <LikeSection />
+      <LikeSection 
+         likesData ={props.post}
+      />
       <CommentSection
         postId={props.post.imageUrl}
         comments={props.post.comments}
